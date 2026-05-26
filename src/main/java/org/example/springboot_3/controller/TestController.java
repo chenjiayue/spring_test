@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 //@Controller
 public class TestController {
@@ -13,4 +15,9 @@ public class TestController {
     public String hello(){
         return "hello world!!!";
     }
+    @RequestMapping(value = "/hello/post",method = RequestMethod.POST)
+    public String helloPost(String name){
+        return "hello world!!!" + name;
+    }
+
 }
